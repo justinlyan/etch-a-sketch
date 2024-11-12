@@ -1,11 +1,22 @@
+body {
+  text-align: center;
+}
+
 .container {
   display: flex;
+  justify-content: center;
 }
 
 .square {
   border: 1px solid black;
 }
 
-.hovered {
-  background: black;
+
+button {
+  background: blue;
+  color: white;
+  padding: 20px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  font-size: 24px;
 }

@@ -3,7 +3,7 @@ const btn = document.querySelector("button");
 
 btn.addEventListener("click", () => {
   let numSquares = requestSquares();
-  while (numSquares > 100) {
+  while (numSquares > 100 || isNaN(numSquares) ) {
     numSquares = requestSquares();
   }
 
@@ -29,7 +29,10 @@ const makeGrid = (numSquaresPerRow) => {
       row.appendChild(square);
   
       square.addEventListener("mouseover", (event) => {
-        event.target.classList.add("hovered");
+        const red = Math.floor(Math.random() * 255);
+        const green = Math.floor(Math.random() * 255);
+        const blue = Math.floor(Math.random() * 255);
+        square.style.backgroundColor = `rgb(${red} ${green} ${blue})`;
       })
     }
     container.appendChild(row);
